@@ -25,10 +25,23 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Dave Syer
  *
  */
+
+/*
+ * @SpringBootApplications
+ * - @ComponentScan
+ * 		- without arguments tells Spring to scan the current package and all of its sub-packages.
+ * 		- picks up @Component (class-level annotation) and  @Repository, @Service, @Configuration, and @Controller
+ * 			since they are all meta-annotations of @Component (https://www.baeldung.com/spring-bean-annotations)
+ * - @EnableAutoConfiguration
+ * 
+ */
 @SpringBootApplication(proxyBeanMethods = false)
 public class PetClinicApplication {
 
 	public static void main(String[] args) {
+		/*
+		 * to bootstrap the application
+		 */
 		SpringApplication.run(PetClinicApplication.class, args);
 	}
 
